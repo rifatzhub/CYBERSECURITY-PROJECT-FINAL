@@ -1,0 +1,19 @@
+.static {
+  position: static;
+  text-align: center;
+}
+
+h1 {
+  position: relative !important;
+  text-align: center;
+  margin-top: 50px !important;
+}
+
+
+body { 
+  background: url(static/images/radial-gradient-2.png) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}

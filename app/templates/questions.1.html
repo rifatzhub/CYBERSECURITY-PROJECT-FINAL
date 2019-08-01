@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+    <link rel="stylesheet" type="text/css" href="static/questions.css">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <html>
+
+    <head>
+        <title>Security Questions</title>
+    </head>
+    <!--<body class="background-image">-->
+    
+    <body background="static/images/blue.jpg">
+
+    <body>
+        <center>
+            <h1>
+                <font size="10">
+                    <font color="white"> Security Questions</font>
+            </h1>
+            <h20>
+                <font size="5">
+                    <font color="white"> These are some security questions that will allow the user to do create a new password if they ever forget via email</font>
+            </h20>
+        </center>
+        <border>
+            <center>
+                {% if redirect %} 
+                    <p style="color: red;"> Please answer 2 or more questions. </p>
+                {% endif %}
+                <div class="user-input">
+                    <form method="GET" action="/index">
+                        Email:<input type="text" name="dob" placeholder="Enter Your Answer" autocomplete="no" /> <br />
+                        What is your Date of Birth? (MM/DD/YYYY)<input type="text" name="dob" placeholder="Enter Your Answer" autocomplete="off" /> <br />
+                        What is your pet's name?<input type="text" name="pet" placeholder="Enter Your Answer" autocomplete="off" /> <br />
+                        In what state/city were you born in?<input type="text" name="location" placeholder="Enter Your Answer" autocomplete="off" /> <br />
+                        What city do you currently reside in?<input type="text" name="city" placeholder="Enter Your Answer" autocomplete="off" /> <br />
+                        <input type="hidden" name="firstname" placeholder="Enter Your First Name"/> <br />
+                        <input type="hidden" name="lastname" placeholder="Enter Your Last Name"/> <br />
+                        <input type="hidden" name="createpassword" placeholder="Enter Password" />
+                        <input type="hidden" name="retypepassword" placeholder="Retype Password" />
+                        <input type="submit" value="Submit" />
+                    </form>
+                </div>
+            </center>
+        </border>
+    </body>

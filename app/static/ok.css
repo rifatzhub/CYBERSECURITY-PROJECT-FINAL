@@ -1,0 +1,11 @@
+.static {
+  position: static;
+  text-align: center;
+}
+
+h1 {
+  position: relative !important;
+  text-align: center;
+  margin-top: 180px !important;
+}
+ 

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/style.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
+    <html>
+
+    <head>
+        <title>J.P.Morgan</title>
+    </head>
+
+    <body class="background-image">
+
+        <body>
+            <center>
+                <h1>
+                    <font size="10">
+                        <font color="white">JPMorgan Chase</font>
+                </h1>
+                <h20>
+                    <font size="5">
+                        <font color="white">Is your JPMorgan Chase bank account password strong enough? Please check below.</font>
+                </h20>
+            </center>
+
+            <border>
+                <center>
+                    {% if redirect %}
+                    <p style="color: red;"> Please try again (The two password inputs do not match). </p>
+                    {% endif %}
+                    <div class="user-input">
+                        <form method="POST" action="/securitycheck">
+                            <input type="text" name="firstname" placeholder="Enter Your First Name" autocomplete="no" /> <br />
+                            <input type="text" name="lastname" placeholder="Enter Your Last Name" autocomplete="no" /> <br />
+                            <input type="password" name="createpassword" placeholder="Enter Password" /> <br />
+                            <input type="password" name="retypepassword" placeholder="Retype Password" /> <br />
+                            <input type="submit" value="Submit" />
+                        </form>
+                        <p>
+                            <font size="4">
+                                <!--<font color="black">Forgot Password</font>-->
+                                <a href="/forgotpassword">Forgot Password</a>
+                                <p>
+                    </div>
+                </center>
+            </border>
+
+        </body>
+        <div class="password-criteria">
+            <h2 id="passcrit">Password Criteria:</h2><br />
+            <h3 id="passcrit2">For a strong password, please have ALL of the following:</h3>
+            <h5>
+                <ol>
+                    <li>More than 1 capital letter</li>
+                    <li>More than 1 lowercase letter</li>
+                    <li>Atleast 4 numbers</li>
+                    <li>No name as well as other personal information <br />indicated in the security questions</li>
+                    <li>More than 12 characters</li>
+                    <li>More than 1 symbol</li>
+                </ol>
+            </h5>
+
+            <div class="copyright">
+                <p>Copyright 2018 JPMorgan Chase & Co. All Rights Reserved.
+                    <p>
+            </div>
+
+
+    </html>

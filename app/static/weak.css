@@ -1,0 +1,21 @@
+/*.background-image {*/
+/*    background-image: url(https://htmlcolorcodes.com/assets/images/html-color-codes-color-tutorials-903ea3cb.jpg);*/
+/*    background-repeat: no-repeat;*/
+/*    background-size: 135px 700px;*/
+/*}*/
+
+.static {
+  position: static;
+  text-align: center;
+}
+
+h1 {
+  position: relative !important;
+  text-align: center;
+  margin-top: 200px !important;
+}
+ 
+li {
+  font-size: 25px;
+    text-align: center;
+}

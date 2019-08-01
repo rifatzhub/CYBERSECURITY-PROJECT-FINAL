@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- import the webpage's stylesheet -->
+    <link rel="stylesheet" type="text/css" href="static/weak.css">
+
+    <!-- Compiled and minified CSS -->
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+        <body>
+            <body background="/static/images/weak.jpg">
+                <h1> <font color="white" size="15"> Sorry your password is weak.</h1>
+                {% for rec in recommendations %}
+                    <li> {{rec}}</li>
+                {% endfor %}
+                </font>
+            </body>
+        </body>
+    <!--<html>-->
+
+    <!--<head>-->
+    <!--    <title>J.P.Morgan</title>-->
+    <!--</head>-->
+    <!--<body class="background-image">-->
+
+    <!--    <body>-->
+    <!--        <center>-->
+    <!--            <h1><font size = "10"><font color="white">JPMorgan Chase</font></h1>-->
+    <!--        </center>-->
+
+    <!--        <border>-->
+    <!--            <center>-->
+    <!--                <div class="user-input">-->
+    <!--                    <form method="POST" action = "/passwordcheck">-->
+    <!--                        <input type="text" name="firstname" placeholder="Enter Your First Name" /> <br />-->
+    <!--                        <input type="text" name="lastname" placeholder="Enter Your Last Name" /> <br />-->
+    <!--                        <input type="password" name="createpassword" placeholder="Enter Password" /> <br />-->
+    <!--                        <input type="password" name="retypepassword" placeholder="Retype Password" /> <br />-->
+    <!--                        <input type="submit" value="Submit" />-->
+    <!--                    </form>-->
+    <!--                </div>-->
+    <!--            </center>-->
+    <!--        </border>-->
+    <!--    </body>-->
+
+    <!--</html>-->
