@@ -42,7 +42,7 @@ def countSymbols(createpassword):
 def countNumbers(createpassword): 
     count = 0
     for c in createpassword: 
-        if not c.isnumeric(): 
+        if c.isnumeric(): 
             count += 1
     return count
 
